@@ -8,4 +8,4 @@ A simple expense tracker where you can track expense and income. You can also ge
 
 This project is meant as a test to grade my current backend skills when using java springboot. 
 
-I had fun, and a lot of frustrating (Spring Security I am looking at you :eyes: ) making this.
+I had fun, and a lot of frustration (Spring Security I am looking at you :eyes: ) making this.
