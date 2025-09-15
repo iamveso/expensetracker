@@ -1,6 +1,6 @@
 package com.simon.expensetracker.controller;
 
-import com.simon.expensetracker.entity.Category;
+import com.simon.expensetracker.dto.response.CategoryResponse;
 import com.simon.expensetracker.service.CategoryService;
 // import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
@@ -18,12 +18,12 @@ public class CategoryController {
     private final CategoryService categoryService;
 
     @GetMapping
-    public ResponseEntity<List<Category>> getAllCategories() {
+    public ResponseEntity<List<CategoryResponse>> getAllCategories() {
         return ResponseEntity.ok(categoryService.getAllCategories());
     }
 
     @PostMapping
-    public ResponseEntity<Category> createCategory(@RequestBody Category category) {
-        return ResponseEntity.ok(categoryService.createCategory(category));
+    public ResponseEntity<CategoryResponse> createCategory(@RequestBody String name) {
+        return ResponseEntity.ok(categoryService.createCategory(name));
     }
 }
